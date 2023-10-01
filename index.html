@@ -1,47 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-<!---------------- This is the head of our html where we add all the external resources and metadata ---------------->
-<head>
-
-    <!---------------- Viewport meta for responsive ---------------->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!---------------- The title of the page ---------------->
-    <title> Sleep like a baby </title>
-
-    <!---------------- This is our font awesomes icons ---------------->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!---------------- Gridlex for our flexbox grids ---------------->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
-
-    <!---------------- Google fonts - catamaran (200, 400, 500, 800) ---------------->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;400;500;800&display=swap" rel="stylesheet"> 
-
-    <!---------------- This is our custom stylesheet, this goes last in the head ---------------->
-    <link href="/style.css" rel="stylesheet">
-</head>
-
-<!---------------- This is the body, this is where all of your page content goes ---------------->
-<body>
-
-    <!---------------- Header banner ---------------->
-    <header class="grid-middle margin-t-1">
-        <div class="col-5_sm-12 sm-center sm-padded-b-0">
-          <a href="/index.html" class="logo">
-            <h2 class="padded-sm sm-margin-b-0"> The Sleep Co </h2>
-          </a>
-        </div>
-        <nav class="navigation col-7_sm-12 text-featured uppercase right sm-center md-padding-b-0 sm-margin-b-1">
-          <a href="/index.html" class="margin-l-1"> Home </a>
-          <a href="/about.html" class="margin-l-1"> About </a>
-          <a href="/products.html" class="margin-l-1"> Products </a>
-          <a href="/contact.html" class="margin-l-1 margin-r-1"> Contact </a>
-        </nav>
-    </header>
+---
+layout: default
+---
 
     <!---------------- Header image banner ---------------->
     <section class="header-banner padded-md grid center tall-100 md-tall-70">
@@ -136,25 +95,3 @@
             <span class="quote-icon"> ” </span>
         </div>
     </section>
-
-    <!---------------- Footer ---------------->
-    <footer class="bg-dark text-white padded-md grid-center padded-b-0">
-        <div class="col-5_sm-12 center">
-            <h2 class="uppercase editable"> The Sleep Co </h2>
-            <p class="editable margin-t-2"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit ipsa voluptatibus mollitia, earum tenetur, eum id ratione quisquam, unde odio quo dignissimos illum iure aut. Iusto quasi ut dolores. Modi. </p>
-        </div>
-        <div class="col-12 margin-t-1 center">
-            <nav>
-                <a href="#"> <i class="fab fa-pinterest-p"></i> </a>
-                <a href="#"> <i class="fab fa-instagram"></i> </a>
-                <a href="#"> <i class="fab fa-facebook-f"></i> </a>
-                <a href="#"> <i class="fab fa-twitter"></i> </a>
-            </nav>
-        </div>
-        <div class="col-12 center padded-sm">
-            <p class="copyright"> Copyright 2023 </p>
-        </div>    
-    </footer>
-
-</body>
-</html>
