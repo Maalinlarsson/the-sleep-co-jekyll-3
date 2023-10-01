@@ -1,5 +1,14 @@
 ---
 layout: default
+featured:
+ - icon: fa-solid fa-cloud
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic qui exercitationem natus in, quo esse vitae laudantium molestiae eius ratione cumque autem asperiores dignissimos quae libero odio earum unde fugit? 
+ - icon: fa-solid fa-bed
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis non quas magnam, incidunt veniam, iste excepturi maxime corrupti rem fuga animi, vel ab cumque! Maiores molestias animi repellendus voluptates perferendis!
+ - icon: fa-solid fa-moon
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, architecto, expedita tenetur cum necessitatibus est unde accusamus pariatur enim earum tempora. Provident ipsa eaque blanditiis. Incidunt repellendus soluta totam earum.
+ - icon: fa-solid fa-heart
+   description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error consequatur facilis, ad odit repudiandae aut aliquam, cupiditate quam adipisci nostrum delectus ratione provident architecto. Quidem eos corporis error dicta asperiores? 
 ---
 
     <!---------------- Header image banner ---------------->
@@ -39,33 +48,20 @@ layout: default
     </section>
 
     <!---------------- Feautures icon grid ---------------->
-    <section class="bg-dark text-white sm-center padded-md grid">
+    <section class="bg-dark text-white sm-center padded-md grid-center">
         <div class="padded-1 col-12 center editable">
             <h2> 
                 <span class="text-featured"> features </span> 
                 you will love 
             </h2>
         </div>
+
+        {% for item in page.featured %}
         <div class="padded-1 col-3_sm-6_xs-12 editable">
-            <i class="fa-solid fa-cloud"></i>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic qui exercitationem natus in, quo esse vitae laudantium molestiae eius ratione cumque autem asperiores dignissimos quae libero odio earum unde fugit? 
-            </p>
+            <i class="{{item.icon}}"></i>
+            <p> {{item.description }} </p>
         </div>
-        <div class="padded-1 col-3_sm-6_xs-12 editable">
-            <i class="fa-solid fa-bed"></i>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis non quas magnam, incidunt veniam, iste excepturi maxime corrupti rem fuga animi, vel ab cumque! Maiores molestias animi repellendus voluptates perferendis!
-            </p>
-        </div>
-        <div class="padded-1 col-3_sm-6_xs-12 editable">
-            <i class="fa-solid fa-moon"></i>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, architecto, expedita tenetur cum necessitatibus est unde accusamus pariatur enim earum tempora. Provident ipsa eaque blanditiis. Incidunt repellendus soluta totam earum.
-            </p>
-        </div>
-        <div class="padded-1 col-3_sm-6_xs-12 editable">
-            <i class="fa-solid fa-heart"></i>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error consequatur facilis, ad odit repudiandae aut aliquam, cupiditate quam adipisci nostrum delectus ratione provident architecto. Quidem eos corporis error dicta asperiores? 
-            </p>
-        </div>
+        {% endfor %}
     </section>
 
     <!---------------- Image banner ---------------->

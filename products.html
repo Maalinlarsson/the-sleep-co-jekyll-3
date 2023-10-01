@@ -1,7 +1,19 @@
 ---
 layout: default
+cards:
+ - image: bg-cat
+   small_image_class: ""
+   heading: standard matress
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt.
+ - image: bg-bear
+   small_image_class: sm-bg-bear
+   heading: deluxe matress
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt.
+ - image: bg-pug
+   small_image_class: sm-bg-pug
+   heading: luxury matress
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt.
 ---
-
     <!---------------- Header image banner ---------------->
     <section class="header-banner padded-md grid center tall-40">
         <div class="col-12-middle">
@@ -42,50 +54,21 @@ layout: default
     <!---------------- Card grid ---------------->
     <section class="padded-md grid-center">
 
-        <!--- Standard mattress --->        
+        {% for item in page.cards %}    
         <div class="col-4_sm-12 padded-sm">
             <a href="/contact.html">
                 <div class="card">
-                    <div class="bg-image portrait bg-cat">
+                    <div class="bg-image portrait {{ item.image }} {{ item.small_image_class }} {% if page.screen_size == 'small' %} {{ item.small_image_class }} {% endif %}">
                         <!--- background image --->
                     </div>
                     <div class="padded-1">
-                        <h2> standard matress </h2>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt. </p>
+                        <h2> {{item.heading}} </h2>
+                        <p> {{item.description}} </p>
                     </div>
                 </div>
             </a> 
         </div>
-
-        <!--- Deluxe mattress ---> 
-        <div class="col-4_sm-12 padded-sm">
-            <a href="/index.html">
-                <div class="card">
-                    <div class="bg-image bg-bear sm-bg-bear portrait">
-                        <!--- background image --->
-                    </div>
-                    <div class="padded-1">
-                        <h2> deluxe matress </h2>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt. </p>
-                    </div>
-                </div> 
-            </a>
-        </div>
-
-        <!--- Luxury mattress ---> 
-        <div class="col-4_sm-12 padded-sm">
-            <a href="/about.html">
-                <div class="card">
-                    <div class="bg-image bg-pug sm-bg-pug portrait">
-                        <!--- background image --->
-                    </div>
-                    <div class="padded-1">
-                        <h2> luxury matress </h2>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt. </p>
-                    </div>
-                </div> 
-            </a>
-        </div>
+        {% endfor %}
 
     </section>
 
