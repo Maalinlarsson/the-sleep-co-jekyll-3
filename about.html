@@ -1,5 +1,14 @@
 ---
 layout: default
+sustainability:
+ - icon: fa-solid fa-bell
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic qui exercitationem natus in.
+ - icon: fa-solid fa-check
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis non quas magnam, incidunt veniam.
+ - icon: fa-solid fa-star
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, architecto, expedita tenetur.
+ - icon: fa-solid fa-hand
+   description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error consequatur facilis. 
 ---
 
     <!---------------- Header image banner ---------------->
@@ -13,10 +22,10 @@ layout: default
 
     <!---------------- Video banner ---------------->
     <section class="grid-center bg-lightblue padded-sm">
-        <div class="col-6_sm-10_xs-12 video-container">
+        <div class="col-6_sm-10_xs-12 video-container" data-aos="zoom-in">
             <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/46564096?h=7b5735ab68&autoplay=1&loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
         </div>
-        <div class="col-6_sm-8_xs-12-middle center">
+        <div class="col-6_sm-8_xs-12-middle center" data-aos="zoom-in-left">
             <h2 class="sm-h2 md-h2 sm-padded-t-1"> Dream about tomorrow. </h2>
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga minus aperiam, esse aspernatur quod dolorem maiores rem quae ipsam itaque quia similique porro, facilis incidunt tenetur? Odit incidunt similique non. </p>
         </div>
@@ -24,50 +33,38 @@ layout: default
 
     <!---------------- Image section ---------------->
     <!--- First grid ---> 
-    <section class="grid padded-sm ">
-        <div class="bg-image bg-sheets col-6_sm-12 tall-70 sm-tall-40">
+    <section class="grid padded-sm">
+        <div class="bg-image bg-sheets col-6_sm-12 tall-50 sm-tall-40">
             <!--- background image --->
         </div>
         <div class="col-6_sm-12-middle center padded-md sm-padded-t-1 editable">
-            <h2> A catchy heading </h2>
+            <h2 class="text-featured"> A catchy heading </h2>
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere alias enim minima numquam, minus fugit beatae aliquam tempora magnam accusantium corrupti ad in commodi dolorem, odio temporibus, unde rem dolore.</p>
         </div>
     </section>
     <!--- Second grid ---> 
     <section class="grid padded-sm flex-flip-sm">
         <div class="col-6_sm-12-middle padded-md sm-padded-t-1 center editable">
-            <h2> A catchy heading </h2>
+            <h2 class="text-featured"> A catchy heading </h2>
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere alias enim minima numquam, minus fugit beatae aliquam tempora magnam accusantium corrupti ad in commodi dolorem, odio temporibus, unde rem dolore.</p>
         </div>
-        <div class="bg-image bg-sheets col-6_sm-12 tall-70 sm-tall-40">
+        <div class="bg-image bg-sheets col-6_sm-12 tall-50 sm-tall-40">
             <!---------------- background image ---------------->
         </div>
     </section>
 
     <!---------------- Sustainability icon grid ---------------->
     <section class="bg-featured text-dark sm-center padded-md grid">
-    <div class="padded-1 col-12 center editable">
-        <h2> committed to <span class="text-white"> sustainability </span>
-        </h2>
-    </div>
-    <div class="padded-1 col-3_sm-6_xs-12 editable">
-        <i class="fa-solid fa-bell"></i>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic qui exercitationem natus in.
-        </p>
-    </div>
-    <div class="padded-1 col-3_sm-6_xs-12 editable">
-        <i class="fa-solid fa-check"></i>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis non quas magnam, incidunt veniam.
-        </p>
-    </div>
-    <div class="padded-1 col-3_sm-6_xs-12 editable">
-        <i class="fa-solid fa-star"></i>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, architecto, expedita tenetur.
-        </p>
-    </div>
-    <div class="padded-1 col-3_sm-6_xs-12 editable">
-        <i class="fa-solid fa-hand"></i>
-        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error consequatur facilis. 
-        </p>
-    </div>
+        <div class="padded-1 col-12 center editable">
+            <h2> committed to <span class="text-white" data-aos="zoom-down" data-aos-duration="1700"> sustainability </span>
+            </h2>
+        </div>
+
+        {% for item in page.sustainability %}
+        <div class="padded-1 col-3_sm-6_xs-12">
+            <i class="{{item.icon}}"></i>
+            <p> {{item.description }} </p>
+        </div>
+        {% endfor %}
+
     </section>

@@ -10,7 +10,7 @@ $( document ).ready(function() {
     // Animate on scroll - activate
     AOS.init({
 
-        duration: 500 // values from 0 to 3000, with step 50ms
+        duration: 600 // values from 0 to 3000, with step 50ms
 
     });
 
