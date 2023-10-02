@@ -1,5 +1,12 @@
 ---
 layout: default
+help:
+ - icon: fa-solid fa-cloud-rain
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic qui exercitationem natus in.
+ - icon: fa-solid fa-cloud
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, architecto. 
+ - icon: fa-solid fa-cloud-sun-rain
+   description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error consequatur facilis.   
 ---
 
     <!---------------- Header image banner ---------------->
@@ -35,7 +42,7 @@ layout: default
 
     <!---------------- Image banner ---------------->
     <section class="grid-middle padded-md">
-        <div class="col-6_sm-12 padded-sm bg-image bg-sheets sm-tall-40 tall-70">
+        <div class="col-6_sm-12 padded-sm bg-image bg-sheets sm-tall-40 tall-60">
                 <!--- background image --->
         </div>
         <div class="col-6_sm-12 padded-sm">
@@ -51,29 +58,15 @@ layout: default
             <h2> need help deciding? </h2>
         </div>
 
-        <!--- First column --->
+        {% for item in page.help %}
         <div class="padded-1 col-3_sm-6_xs-12 editable">
-            <i class="fa-solid fa-cloud"></i>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic qui exercitationem natus in.
-            </p>
+            <i class="{{item.icon}}"></i>
+            <p> {{item.description }} </p>
         </div>
-
-        <!--- Second column --->
-        <div class="padded-1 col-3_sm-6_xs-12 editable">
-            <i class="fa-solid fa-cloud"></i>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, architecto.
-            </p>
-        </div>
-
-        <!--- Third column --->
-        <div class="padded-1 col-3_sm-6_xs-12 editable">
-            <i class="fa-solid fa-cloud"></i>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error consequatur facilis. 
-            </p>
-        </div>
+        {% endfor %}
 
         <!--- Button --->
-        <div class="col-12 center margin-t-2">
+        <div class="col-12 center margin-t-2" data-aos="fade-up" data-aos-duration="1000">
             <a href="#" class="button bg-dark text-white uppercase"> Chat to our team </a>
         </div>
     </section>
