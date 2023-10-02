@@ -49,7 +49,7 @@ a:hover {
 
 .padded-l               { padding-left: 5%;                  }
 .padded-r               { padding-right: 5%;                 }
-.padded-l-0             { padding-left: 0:                   }
+.padded-l-0             { padding-left: 0;                   }
 .padded-r-0             { padding-right: 0;                  }
 
 .padded-0               { padding: 0;                        }
@@ -230,6 +230,8 @@ footer a:hover {
     background-image: url('/images/sleep-co-1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: rgb(240,240,240);
+    background-position: center;
     /* min-height: 10rem; */
 }
 
@@ -274,6 +276,11 @@ footer a:hover {
 
 .bg-pos-t-l     { background-position: left top;     }
 .bg-pos-b-r     { background-position: right bottom; }
+
+/*---------------- Gallery image styles ----------------*/
+.gallery [class*="col-"] {
+    padding: 0.5%;
+}
 
 /*---------------- Card styles ----------------*/
 .card { 
