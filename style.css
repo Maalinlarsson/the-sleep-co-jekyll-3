@@ -295,7 +295,8 @@ form button:hover {
 /*---------------- General CSS responsive styles (apply everywhere unless overridden) ----------------*/
 .show-xs,
 .show-sm,
-.show-md {
+.show-md,
+.mobile-menu {
     display: none;
 }
 
