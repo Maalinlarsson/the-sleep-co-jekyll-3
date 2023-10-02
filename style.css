@@ -179,6 +179,51 @@ footer a:hover {
 
 .copyright { color: #406F8E; }
 
+/*---------------- Hamburger menu styles ----------------*/
+/*-- This is style for the menu --*/
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 20;
+    right: 0;
+    color: #534416;
+    opacity: 0.7;
+    padding: 15%;
+}
+
+/*-- This is the links in the menu --*/
+.mobile-menu a {
+    display: block;
+    font-size: 1.8rem;
+}
+
+/*-- This is when you hovering the links in the menu --*/
+.mobile-menu a:hover {
+    color: #192B37;
+}
+
+/*-- This is the hamburger icon --*/
+.hamburger-button {
+    position: relative;
+    z-index: 2;
+    color: #FFBE00;
+    cursor: pointer;
+    margin-top: -1.8rem;
+    right: 2rem;
+    top: 1.1rem;
+  }
+
+/*-- This is the hamburger icon (to get the style for just this icon and not all of the site) --*/
+.hamburger-button i {
+    font-size: 2rem;
+}
+
+/*-- This is when you press the hamburger icon and it's active --*/
+.hamburger-button.active {
+    color: #534416;;
+}
+
 /*---------------- Background images ----------------*/
 .bg-image {
     background-image: url('/images/sleep-co-1.jpg');
