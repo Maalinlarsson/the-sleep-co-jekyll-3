@@ -16,8 +16,7 @@ $( document ).ready(function() {
 
 });
 
-
-
+//This is the first popup gallery 
 lightGallery(document.getElementById('lightgallery'), {
     speed: 500,
     download: false
@@ -25,7 +24,7 @@ lightGallery(document.getElementById('lightgallery'), {
 });
 
 
-
+// This is the second popup gallery
 lightGallery(document.getElementById('lightgallery-2'), {
     speed: 500,
     download: false
