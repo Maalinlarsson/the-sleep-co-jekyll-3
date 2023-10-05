@@ -22,7 +22,7 @@ gallery:
 ---
 
  <!---------------- Header image banner ---------------->
- <section class="header-banner padded-md grid center tall-70 md-tall-40">
+<section class="header-banner padded-md grid center tall-70 md-tall-40">
   <div class="col-12-middle">
       <h3 class="font-weight-extra-bold editable"> <span class="text-featured"> explore </span> our world
       </h3>
@@ -30,7 +30,38 @@ gallery:
   </div> 
 </section>
 
+<!---------------- Image gallery  ---------------->
+<section class="padded-md">
+  <h2> Popup Gallery </h2>
+  <div class="gallery grid" id="lightgallery">
 
+    {% for item in page.gallery %}
+    <a class="{{item.column-size}} gallery-item" href="{{item.background_image}}">
+      <div class="bg-image {{item.aspect-ratio}}" 
+        style="background-image: url('{{item.background_image}}');">
+      </div>
+    </a> 
+    {% endfor %}
+
+  </div>
+
+  <!-- Second pop-up gallery -->
+  <div class="gallery grid" id="lightgallery-2">
+
+    <a class="button" href="/images/sleep-co-5.jpg"> View our work </a> 
+    <a href="/images/sleep-co-6.jpg" title="Amazing sheets"></a> 
+    <a href="/images/sleep-co-3.jpg" title="Yellow background"></a> 
+    <a href="/images/sleep-co-2.jpg" title="Sleep good"></a> 
+    <a href="/images/sleep-co-1.jpg" title="Crispy white sheets"></a> 
+    <a href="/images/sleep-co-8.jpg" title="Sleeping bear"></a> 
+    <a href="/images/sleep-co-4.jpg" title="Tired dog"></a> 
+
+  </div>
+</section>
+
+<!---------------- Standard gallery  ---------------->
+<!-- 
+<h2> Standard Gallery </h2>
 <section class="padded-md">
   <div class="gallery grid">
 
@@ -43,4 +74,5 @@ gallery:
     {% endfor %}
 
   </div>
-</section>
+</section> 
+-->

@@ -163,7 +163,7 @@ p:last-child {
 }
 
 header a:hover {
-    color: #FFDF83;
+    color: ;
 }
 
 .logo  { color: #FFBE00; }
@@ -282,6 +282,19 @@ footer a:hover {
     padding: 0.5%;
 }
 
+/* Background of gallery when active */
+.lg-backdrop {
+background-color: rgb(60,60,60);
+}
+
+.lg-backdrop.in {
+    opacity: 0.8;
+}
+
+/* This is for the text under the images, on the second popup gallery */
+.lg-sub-html {
+    background-color: black;
+}
 /*---------------- Card styles ----------------*/
 .card { 
     border: 2px solid #FFBE00;  
