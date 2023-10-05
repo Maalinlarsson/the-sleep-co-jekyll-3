@@ -1,7 +1,6 @@
 ---
 layout: default
 popup-gallery: true
-gallery-background: bg-dark
 gallery:
  - column-size: col-6
    aspect-ratio: square
@@ -42,20 +41,17 @@ gallery:
 <!-- This is the first popup gallery -->
 {% if page.popup-gallery == true %}
 
-<section class="padded-md {{page.gallery-background}}">
+<section class="padded-md">
   <h2 class="center uppercase text-featured"> Popup Gallery </h2>
   <div class="gallery grid" id="lightgallery">
 
     {% for item in page.gallery %}
-
-    {% if item.type != 'dog' %}
 
     <a class="{{item.column-size}} gallery-item" href="{{item.background_image}}">
       <div class="bg-image {{item.aspect-ratio}}" 
         style="background-image: url('{{item.background_image}}');">
       </div>
     </a> 
-    {% endif %}
     {% endfor %}
 
   </div>
@@ -77,7 +73,7 @@ gallery:
 {% else %}
 
 <!-- This is the standard gallery -->
-<section class="padded-md {{page.gallery-background}}">
+<section class="padded-md">
   <h2 class="center text-featured margin-b-0"> Standard Gallery </h2>
   <div class="gallery grid">
 
@@ -95,4 +91,59 @@ gallery:
 {% endif %}
 
 
-<!-- {% if page.gallery-background == 'Dark background' %} bg-dark {% endif %} -->
+
+
+
+<!------ You can use if statement on this side to hide/show images and/or use a dark background..
+put for example this in the frontmatter: gallery-background: bg-dark
+then use 
+{% if page.popup-gallery == true %}
+
+<section class="padded-md {{page.gallery-background}}">
+  <h2 class="center uppercase text-featured"> Popup Gallery </h2>
+  <div class="gallery grid" id="lightgallery">
+
+    {% for item in page.gallery %}
+
+    <a class="{{item.column-size}} gallery-item" href="{{item.background_image}}">
+      <div class="bg-image {{item.aspect-ratio}}" 
+        style="background-image: url('{{item.background_image}}');">
+      </div>
+    </a> 
+    {% endfor %}
+
+  </div>
+
+  
+  <div class="gallery grid-center" id="lightgallery-2">
+
+    <a class="button button-gallery-2" href="/images/sleep-co-5.jpg" title="Cute cat"> View our work </a> 
+    <a href="/images/sleep-co-6.jpg" title="Amazing sheets"></a> 
+    <a href="/images/sleep-co-3.jpg" title="Yellow background"></a> 
+    <a href="/images/sleep-co-2.jpg" title="Sleep good"></a> 
+    <a href="/images/sleep-co-1.jpg" title="Crispy white sheets"></a> 
+    <a href="/images/sleep-co-8.jpg" title="Sleeping bear"></a> 
+    <a href="/images/sleep-co-4.jpg" title="Tired dog"></a> 
+
+  </div>
+</section>
+
+{% else %}
+
+
+  
+if you for example just want to show different types you can do it like this:
+add this under the classes in the frontmatter: type: dog (for example)
+   {% for item in page.gallery %}
+
+    {% if item.type != 'dog' %}
+
+    <a class="{{item.column-size}} gallery-item" href="{{item.background_image}}">
+      <div class="bg-image {{item.aspect-ratio}}" 
+        style="background-image: url('{{item.background_image}}');">
+      </div>
+    </a> 
+
+    {% endif %}
+    {% endfor %}
+------>
