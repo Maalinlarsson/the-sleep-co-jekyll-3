@@ -328,6 +328,10 @@ background-color: rgb(60,60,60);
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
+/*---------------- About us cards ----------------*/
+.card.card-2:hover {
+    box-shadow:none;
+}
 /*---------------- Font awesome icons styles ----------------*/
 .fa-solid {
     display: block;
