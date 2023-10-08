@@ -8,10 +8,10 @@ _select_data:
     - landscape-wide
 
   column-sizes:
-    col-6: One half
-    col-12: Full width
-    col-4: One third
-    col-3: One quarter
-    col-6_sm-12: One half (Stacked)
-    col-4_sm-12: One third (Stacked)
-    col-3_sm-12: One quarter (Stacked)
+    col-6: one half
+    col-12: full width
+    col-4: one third
+    col-3: one quarter
+    col-6_sm-12: one half (Stacked)
+    col-4_sm-12: one third (Stacked)
+    col-3_sm-12: one quarter (Stacked)
