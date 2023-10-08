@@ -4,6 +4,14 @@ Yellow: #FFBE00;
 Navy: #192B37;
 */
 
+/*---------------- Color variables ----------------*/
+:root {
+    --dark: #192B37;   
+    --featured: #FFBE00; 
+    --lightblue: #E7EEF4; 
+}
+
+
 /*---------------- CSS reset ----------------*/
 * {
     margin: 0;
@@ -300,8 +308,15 @@ background-color: rgb(60,60,60);
 .button-gallery-2 {
     text-transform: uppercase;
     margin-top: 2rem;
-    color: rgb(60,60,60);
+    color: white;
+    background-color: #FFBE00;
+    border: 2px solid #FFBE00;
+}
+
+.button.button-gallery-2:hover {
+    color: #FFBE00;
     border: 2px solid rgb(60,60,60);
+    background-color: rgb(60,60,60);
 }
 
 /*---------------- Card styles ----------------*/
