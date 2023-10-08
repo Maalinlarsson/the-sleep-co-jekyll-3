@@ -9,6 +9,8 @@ Navy: #192B37;
     --dark: #192B37;   
     --featured: #FFBE00; 
     --lightblue: #E7EEF4; 
+    --darkblue: #406F8E;
+    --brown: #534416;
 }
 
 
@@ -182,10 +184,10 @@ footer a {
 }
 
 footer a:hover {
-    color: #406F8E;
+    color: var(--darkblue);
 }
 
-.copyright { color: #406F8E; }
+.copyright { color: var(--darkblue); }
 
 /*---------------- Hamburger menu styles ----------------*/
 /*-- This is style for the menu --*/
@@ -195,7 +197,7 @@ footer a:hover {
     bottom: 0;
     left: 20;
     right: 0;
-    color: #534416;
+    color: var(--brown);
     opacity: 0.7;
     padding: 15%;
 }
@@ -230,7 +232,7 @@ footer a:hover {
 
 /*-- This is when you press the hamburger icon and it's active --*/
 .hamburger-button.active {
-    color: #534416;
+    color: var(--brown);
 }
 
 /*---------------- Background images ----------------*/
