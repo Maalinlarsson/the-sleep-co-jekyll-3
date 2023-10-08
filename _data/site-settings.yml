@@ -1,6 +1,6 @@
 design:
-  dark: '#192B37'
-  featured: '#FFBE00'
-  lightblue: '#E7EEF4'
-  darkblue: '#406F8E'
-  brown: '#534416'
+  dark_color: '#192B37'
+  featured_color: '#FFBE00'
+  lightblue_color: '#E7EEF4'
+  darkblue_color: '#406F8E'
+  brown_color: '#534416'
