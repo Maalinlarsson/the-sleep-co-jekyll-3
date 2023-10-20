@@ -381,6 +381,22 @@ form button:hover {
     border: 2px solid var(--featured);
 }
 
+/*---------------- Explore page IG ----------------*/
+.explore-page h1 {
+    margin-bottom: 1rem;
+}
+
+.explore-page a {
+    display: block;
+    padding: 0.5rem 0.5rem;
+    border: 1px solid;
+    margin-bottom: 0.5rem;
+}
+
+.explore-page .featured {
+    background-color: white;
+    color: var(--featured);
+}
 /*---------------- General CSS responsive styles (apply everywhere unless overridden) ----------------*/
 .show-xs,
 .show-sm,
